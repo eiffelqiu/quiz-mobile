@@ -1,5 +1,9 @@
 # Quiz Mobile
 
+![ass usage](https://raw.github.com/eiffelqiu/quiz-mobile/master/capture1.png)
+![ass usage](https://raw.github.com/eiffelqiu/quiz-mobile/master/capture2.png)
+![ass usage](https://raw.github.com/eiffelqiu/quiz-mobile/master/capture3.png)
+
 - - -
 
 Quiz Mobile Development
