@@ -1,8 +1,8 @@
 # Quiz Mobile
 
-![Screen Shot](capture1.png "Screen Shot 1")
-![Screen Shot](capture2.png "Screen Shot 2")
-![Screen Shot](capture3.png "Screen Shot 3")
+![Screen Shot](capture1.jpg "Screen Shot 1")
+![Screen Shot](capture2.jpg "Screen Shot 2")
+![Screen Shot](capture3.jpg "Screen Shot 3")
 
 - - -
 
