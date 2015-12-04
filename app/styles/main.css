@@ -1,0 +1,291 @@
+body{
+    margin:0px;padding:0px;font-size:1px; background:#f5f5f5;color:#303639; font-family:"Microsoft YaHei";position:relative;
+}
+div,form,img,ul,ol,li,dl,dt,dd,span,p,input{
+    margin:0px;padding:0px;border:none;vertical-align:top;outline:none
+}
+ul,dl,ol{
+    list-style-type:none;
+}
+h2,h3,h4,h5,h6{
+    margin:0;padding:0;font-weight:normal;
+}
+h1{
+    font-weight:normal; margin:0; padding:0
+}
+input,select{
+    font-size:14px;font-family:Arial,"Î¢ÈíÑÅºÚ",Verdana,Tahoma; vertical-align:middle;margin:0px;padding:0px;cursor: pointer;
+}
+a:link{color:#333;text-decoration:none; cursor: pointer;}
+a:visited{color:#333;text-decoration:none;}
+a:hover{color:#d80d18; text-decoration:underline;}
+a:active{color:#f00;text-decoration:none;}
+a,a:active {
+    cursor: pointer;outline: none;star:expression_r(this.onFocus=this.blur());
+}
+html,body{
+    width:100%;height:100%;
+}
+.Result{
+    text-align: center;
+}
+.section{
+    position: relative;
+}
+.oCs{
+    position: absolute;top:0;left:0; display: none;
+}
+.oCs img{
+    width:100%;height:50%;
+}
+.Result h3{
+    width: 100%; text-align: center;font-size:1.3rem;
+}
+.Result h3 b{
+    margin-right:10px;color:#898989;
+}
+.fx{
+    width:100%; text-align: center; overflow: hidden;
+}
+.fx span{
+    width:5rem;height:5rem;border-radius: 50%; display: inline-block;line-height:5rem;color:#fff;font-size:1rem;
+    cursor: pointer;
+}
+.fx span a{
+    color:#fff;
+}
+.fx span a:hover{
+    text-decoration: none;
+}
+.fx span.f{
+    background:#d93a4c;margin-right:1.5rem;
+}
+.fx span.c{
+    background:#76cc5e;
+}
+.ewm{
+    width:100%; text-align: center;margin-top:1rem;
+}
+.Result h3 strong{
+    color:#ff0000;
+}
+#fullpage{
+    max-width:640px;margin:0 auto;
+}
+.section:nth-child(1){
+    background:url("./images/product.jpg") no-repeat; background-size: 100% 100%;
+}
+.section:nth-child(2){
+    background:url("./images/pro08.jpg") no-repeat; background-size: 100% 100%;
+}
+.oS_main h3 img{
+    width:70%;
+}
+.oTwo{
+    margin:0 auto;position: relative;margin-top:10%; display: inline-block;width:95%; text-align: center;
+}
+.yuan{
+    width: 100% ;-webkit-animation:goto 3.9s linear 0s infinite;
+}
+.oShit{
+    width:70%;padding:0 15%; text-align: center;
+}
+.oImg img{
+    width:70%;
+}
+.oNe{
+    margin-top:0.5rem;
+}
+.oNe img{
+    width:50%;
+}
+.oShit span:hover{
+    background:#f5e5cf;
+}
+.oShit span{
+    width:100%; display: block;margin-top:0.2rem;padding:10px; overflow: hidden;
+}
+.oShit span img{
+    width:15%;margin-right:10px;float: left;
+}
+
+@media screen and (min-width: 320px) and (max-width:360px) {
+    .oS_main{
+        padding:0 20px;display:inline-block;margin-top:37%;
+    }
+    .oS_main p {
+        width: 60%;
+        color: #fff;
+        line-height: 1.2rem;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+    .oS_main span img{
+        width:50%;
+    }
+    .oS_main span{
+        margin-top:1.8em;display: block; overflow: hidden; width: 100%;
+    }
+    .gun{
+        position: absolute;top:0;right:39px; z-index:88;
+    }
+    .yuan img{
+        width:50%; z-index: 10;
+    }
+    .wen img{
+        width:20%;margin-top:20px;
+    }
+    .gun img{
+        width:50%;
+    }
+    .oShit span b{
+        font-weight: normal; text-align: left;width: 70%;float: left;
+        font-size:0.9rem;padding-top:3px;
+    }
+    .Result p{
+        width: 80%;font-size:1rem;color:#000;margin:10px auto;line-height: 1.3rem; text-align: left;
+        overflow: hidden;
+    }
+    .ewm img{
+        width:60%;
+    }
+}
+@media screen and (min-width: 360px) and (max-width:480px) {
+    .oS_main{
+        padding:0 20px;display:inline-block;margin-top:50%;
+    }
+    .oS_main p {
+        width: 58%;
+        color: #fff;
+        line-height: 1.8rem;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .oS_main span img{
+        width:50%;
+    }
+    .oS_main span{
+        margin-top:1.8em;display: block; overflow: hidden; width: 100%;
+    }
+    .gun{
+        position: absolute;top:0;right:45px; z-index:88;
+    }
+    .yuan img{
+        width:50%;z-index: 10;
+    }
+    .wen img{
+        width:26%;margin-top:30px;
+    }
+    .gun img{
+        width:60%;
+    }
+    .oShit span b{
+        font-weight: normal; text-align: left;width: 70%;float: left;
+        font-size:1rem;padding-top:5px;
+    }
+    .Result p{
+        width: 80%;font-size:1rem;color:#000;margin:10px auto;line-height: 1.8rem; text-align: left;
+        overflow: hidden;
+    }
+    .ewm img{
+        width:80%;
+    }
+}
+@media screen and (min-width: 480px) {
+    .oS_main{
+        padding:0 20px;display:inline-block;margin-top:50%;
+    }
+    .oS_main p {
+        width: 60%;
+        color: #fff;
+        line-height: 2.2rem;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+    }
+    .oS_main span img{
+        width:50%;
+    }
+    .oS_main span{
+        margin-top:1.8em; display: block; overflow: hidden;width: 100%;
+    }
+    .gun{
+        position: absolute;top:0;right:35px; z-index:88;
+    }
+    .yuan img{
+        width:50%;z-index: 10;
+    }
+    .wen img{
+        width:26%;margin-top:30px;
+    }
+    .gun img{
+        width:60%;
+    }
+    .oShit span b{
+        font-weight: normal; text-align: left;width: 70%;float: left;
+        font-size:1rem;padding-top:5px;
+    }
+    .Result p{
+        width: 80%;font-size:1rem;color:#000;margin:10px auto;line-height: 1.8rem; text-align: left;
+        overflow: hidden;
+    }
+    .ewm img{
+        width:80%;
+    }
+
+}
+
+@-webkit-keyframes load-two{
+    0%{
+        margin-left:-500px;
+        display: block;
+    }
+    50%{
+        margin-left:0px;
+        display: block;
+    }
+    70%{
+        transform: rotate(0deg) scale(0.2);
+        -webkit-transform: rotate(0deg) scale(0.2);
+        -moz-transform: rotate(0deg) scale(0.2);
+        -ms-transform: rotate(0deg) scale(0.2);
+        -o-transform: rotate(0deg) scale(0.2);
+        margin-left:0px;
+    }
+    100%{
+        transform: rotate(360deg) scale(1);
+        -webkit-transform: rotate(360deg) scale(1);
+        -moz-transform: rotate(360deg) scale(1);
+        -ms-transform: rotate(360deg) scale(1);
+        -o-transform: rotate(360deg) scale(1);
+        margin-left:0px;
+    }
+}
+@-webkit-keyframes goto{
+    0%{
+        transform:rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

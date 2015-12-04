@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>测试问卷</title>
+</head>
+<body>
+
+<!--标准网页-->
+<div data-role="page" id="home">
+
+    <div data-role="header">
+        <h1>测试问卷</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+             <label for="username">参与互动分析测试， 请先输入你的姓名:</label>
+             <input type="text" name="username" id="username" value="">
+        <a data-role="button" data-mini="true" data-inline="true" data-theme="b" id="begin">开始</a>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>版权所有</h4>
+    </div>
+</div>
+
+<div data-role="page" id="quiz">
+
+    <div data-role="header">
+        <h1>测试问卷<span id="testProgress"></span></h1>
+    </div>
+
+    <!-- /header -->
+
+    <div role="main" class="ui-content">
+        <p><h3 id="question"></h3></p>
+
+        <form>
+            <input type="hidden" id="result"/>
+            <fieldset data-role="controlgroup">
+                        
+                <legend>选择答案:</legend>
+
+                <input type="radio" name="choice-a" id="choice-a" value="0">
+
+                <label for="choice-a">该描述完全不符合我的情况</label>
+
+                <input type="radio" name="choice-b" id="choice-b" value="1">
+
+                <label for="choice-b">该描述基本不符合我的情况</label>
+
+                <input type="radio" name="choice-c" id="choice-c" value="2">
+
+                <label for="choice-c">该描述有些符合我的情况</label>
+
+                <input type="radio" name="choice-d" id="choice-d" value="3">
+
+                <label for="choice-d">该描述符合我的情况</label>
+
+                <input type="radio" name="choice-e" id="choice-e" value="4">
+
+                <label for="choice-e">该描述非常符合我的情况</label>    
+
+            </fieldset>
+        </form>
+    </div>
+    <!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+        <h4>版权所有</h4>
+    </div>
+    <!-- /footer -->
+
+</div>
+
+<div data-role="page" id="final">
+
+    <div data-role="header">
+        <h1>测试问卷</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <p>感谢您的参与</p>
+        <p></p>
+        <p>试卷将由专业互动分析老师测评，测评报告将在课程中发到您手中。</p>
+        <a data-role="button" data-mini="true" data-inline="true" data-theme="b" id="submitest">提交问卷</a>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>版权所有</h4>
+    </div>
+</div>
+
+<!--常用 javascript cdn 库-->
+<link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.5/css/themes/default/jquery.mobile-1.4.5.min.css">
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<!--程序逻辑和预加载代码.-->
+<!--应用程序逻辑在 app.js 里， 编写页面逻辑只需要在 app/application.js 中写，brunch 会自动编译到 public/app.js 里-->
+<!--预加载逻辑在 loading.js 里，所有预先加载的图片要在 loading.js 中填写，属于静态文件，源文件放在 app/assets/loading.js 下-->
+
+<script src="app.js"></script>
+<script src="loading.js"></script>
+
+</body>
+</html>
