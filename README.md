@@ -1,8 +1,8 @@
 # Quiz Mobile
 
-![ass usage](https://raw.github.com/eiffelqiu/quiz-mobile/master/capture1.png)
-![ass usage](https://raw.github.com/eiffelqiu/quiz-mobile/master/capture2.png)
-![ass usage](https://raw.github.com/eiffelqiu/quiz-mobile/master/capture3.png)
+![Screen Shot](capture1.png "Screen Shot 1")
+![Screen Shot](capture2.png "Screen Shot 2")
+![Screen Shot](capture3.png "Screen Shot 3")
 
 - - -
 
