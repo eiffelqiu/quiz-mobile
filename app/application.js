@@ -22,6 +22,12 @@ var App = {
 
         app.counter = 0;
 
+        app.a0 = 0;
+        app.a1 = 0;
+        app.a2 = 0;
+        app.a3 = 0;
+        app.a4 = 0;
+
         $("#question").text(app.Q[app.counter]);
 
         function sel(i) {
@@ -53,6 +59,53 @@ var App = {
             }
         });
 
+        function drawPie() {
+            var width = 400;
+            var height = 400;
+            var dataset = [ app.a0 , app.a1 , app.a2 , app.a3 , app.a4 ];
+            var dataset1 = [ "完全不符合" , "基本不符合" , "有些符合" , "符合" , "非常符合" ];
+
+            var svg = d3.select("#pie")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            var pie = d3.layout.pie();
+
+            var piedata = pie(dataset);
+
+            var outerRadius = 150;	//外半径
+            var innerRadius = 0;	//内半径，为0则中间没有空白
+
+            var arc = d3.svg.arc()	//弧生成器
+                .innerRadius(innerRadius)	//设置内半径
+                .outerRadius(outerRadius);	//设置外半径
+
+            var color = d3.scale.category10();
+
+            var arcs = svg.selectAll("g")
+                .data(piedata)
+                .enter()
+                .append("g")
+                .attr("transform","translate("+ (width/2) +","+ (width/2) +")");
+
+            arcs.append("path")
+                .attr("fill",function(d,i){
+                    return color(i);
+                })
+                .attr("d",function(d){
+                    return arc(d);
+                });
+
+            arcs.append("text")
+                .attr("transform",function(d){
+                    return "translate(" + arc.centroid(d) + ")";
+                })
+                .attr("text-anchor","middle")
+                .text(function(d,i){
+                    return  Math.round((d.data / app.Q.length) * 100) + "% " + dataset1[i] ;
+                });
+        }
 
         $("#submitest").click(function () {
             $.post("quiz.php", {
@@ -64,27 +117,34 @@ var App = {
                     alert("提交成功");
                     $('#username').val("");
                     app.name = '';
-                    $.mobile.navigate("#home", {transition: "flip", info: "finish"});
+                    $('#tip').hide();
+                    drawPie();
+                    //$.mobile.navigate("#home", {transition: "flip", info: "finish"});
                 });
         });
 
         $("#choice-a").click(function () {
+            app.a0 += 1;
             sel(0);
         });
 
         $("#choice-b").click(function () {
+            app.a1 += 1;
             sel(1);
         });
 
         $("#choice-c").click(function () {
+            app.a2 += 1;
             sel(2);
         });
 
         $("#choice-d").click(function () {
+            app.a3 += 1;
             sel(3);
         });
 
         $("#choice-e").click(function () {
+            app.a4 += 1;
             sel(4);
         });
     }

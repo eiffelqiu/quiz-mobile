@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>测试问卷</title>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body>
 
@@ -34,7 +35,9 @@
     <!-- /header -->
 
     <div role="main" class="ui-content">
-        <p><h3 id="question"></h3></p>
+        <p>
+
+        <h3 id="question"></h3></p>
 
         <form>
             <input type="hidden" id="result"/>
@@ -81,10 +84,15 @@
     </div>
 
     <div role="main" class="ui-content">
-        <p>感谢您的参与</p>
-        <p></p>
-        <p>试卷将由专业互动分析老师测评，测评报告将在课程中发到您手中。</p>
-        <a data-role="button" data-mini="true" data-inline="true" data-theme="b" id="submitest">提交问卷</a>
+        <div id="pie"></div>
+        <div id="tip">
+            <p>感谢您的参与</p>
+
+            <p></p>
+
+            <p>试卷将由专业互动分析老师测评，测评报告将在课程中发到您手中。</p>
+            <a data-role="button" data-mini="true" data-inline="true" data-theme="b" id="submitest">提交问卷</a>
+        </div>
     </div>
 
     <div data-role="footer" data-position="fixed">
