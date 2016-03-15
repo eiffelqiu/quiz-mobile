@@ -14,9 +14,6 @@ exports.config =
         sourceMap: no   # generate inline source maps
         stripTypes: no  # strip type annotations
       babel: false
-    imageoptimizer:
-      smushit: false # if false it use jpegtran and optipng, if set to true it will use smushit
-      path: 'images' # your image path within your public folder
     uglify:
       mangle: true
       compress:
