@@ -16,11 +16,20 @@ Quiz Mobile 使用
     $ npm install
     $ npm install -g brunch
 
-###### 启动服务器 
+###### 前端测试开发 
 
-前端开发人员编写 index.html(app/assets/下), 每次开发前，启动服务器，在 http://localhost:3333 上访问本地应用
+前端开发人员编写 index.html(app/assets/下), 每次开发前，启动服务器
 
     $ brunch w
+    
+然后打开浏览器在 http://localhost:3333 上访问本地应用    
+    
+###### 集成后台 php 测试开发 
+
+    $ cd public
+    $ php -S localhost:8080 
+    
+然后打开浏览器在 http://localhost:8080 上访问本地应用
 
 ###### 优化和发布 
 
