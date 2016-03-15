@@ -9,14 +9,14 @@ header("Content-type: text/html; charset=utf-8");
 
 $conn = @mysql_connect("localhost", "quiz", "quiz");
 if (!$conn) {
-    die("连接数据库失败：" . mysql_error());
+    die("杩炴帴鏁版嵁搴撳け璐ワ細" . mysql_error());
 }
 
 mysql_select_db("services", $conn);
 mysql_query("set names 'utf8'");
 
 
-$result = mysql_query("SELECT  testitle, name, result  FROM quiz order by id desc");
+$result = mysql_query("SELECT  testitle, name, result, create_at FROM svc_quiz order by id desc");
 
 while ($e = mysql_fetch_object($result)) $output[] = $e;
 print(json_encode($output));
