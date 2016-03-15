@@ -1,29 +1,34 @@
 <?php
 
-$conn = @mysql_connect("localhost", "quiz", "quiz");
+$conn = @mysql_connect("localhost","quiz","quiz");
 if (!$conn){
-    die("Á¬½ÓÊý¾Ý¿âÊ§°Ü£º" . mysql_error());
+    die("è¿žæŽ¥æ•°æ®åº“å¤±è´¥ï¼š" . mysql_error());
 }
 
-//CREATE TABLE quiz (
+//CREATE TABLE svc_quiz (
 //id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-//testitle VARCHAR(100) NOT NULL,
-//name VARCHAR(50) NOT NULL,
+//testitle VARCHAR(200) NOT NULL,
+//name VARCHAR(100) NOT NULL,
 //result TEXT NOT NULL,
+//create_at TIMESTAMP (14),
 //PRIMARY KEY (id)
 //)
 
 mysql_select_db("services", $conn);
 mysql_query("set names 'utf8'");
 
-$testitle = mysql_real_escape_string($_POST['testitle']);
+$testitle = mysql_real_escape_string($_POST['testitle']) . ' 2016-03-15';
 $username = mysql_real_escape_string($_POST['username']);
 $result = mysql_real_escape_string($_POST['result']);
 
-$sql = "INSERT INTO quiz(testitle, name, result) VALUES ( '$testitle' , '$username', '$result')";
+//$today = date("Ymd-H:m:s");
+
+$sql = "INSERT INTO svc_quiz(testitle, name, result, create_at) VALUES ( '$testitle' , '$username', '$result', NOW())";
 
 if(!mysql_query($sql,$conn)){
-    die("´íÎó: " . mysql_error());
+    die("é”™è¯¯: " . mysql_error());
+//    header( 'Location: erro.html' ) ;
+} else {
+//    echo '$sql';
 }
-
 mysql_close();
